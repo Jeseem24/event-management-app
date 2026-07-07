@@ -1,7 +1,7 @@
 variable "aws_region" {
   description = "The AWS region to deploy resources in"
   type        = string
-  default     = "us-east-1"
+  default     = "ap-south-1"
 }
 
 variable "project_name" {
@@ -13,12 +13,7 @@ variable "project_name" {
 variable "environment" {
   description = "Deployment environment (e.g., dev, staging, prod)"
   type        = string
-  default     = "production"
-}
-
-variable "bucket_name" {
-  description = "The name of the S3 bucket. Must be globally unique."
-  type        = string
+  default     = "prod"
 }
 
 variable "custom_domain_name" {

@@ -17,7 +17,7 @@ provider "aws" {
 # -----------------------------------------------------------------------------
 
 resource "aws_s3_bucket" "frontend" {
-  bucket        = var.bucket_name
+  bucket        = "${var.project_name}-${var.environment}"
   force_destroy = true
 
   tags = {
