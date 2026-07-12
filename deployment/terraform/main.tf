@@ -6,10 +6,17 @@ terraform {
       version = "~> 5.0"
     }
   }
+  cloud {
+    organization = "jeseem-event-management"
+    workspaces {
+      name = "event-management-app"
+    }
+  }
+
 }
 
 provider "aws" {
-  region = var.aws_region
+  region  = var.aws_region
 }
 
 # -----------------------------------------------------------------------------
